@@ -24,7 +24,7 @@ stage('build'){
 	}
 	stage('deployment'){
 		steps{
-			sh "scp -i /home/jenkins/sanjay.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"	
+			sh "scp -i C:\Users\Remy\Desktop\key pair **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"	
 		}
 		
 	}	
