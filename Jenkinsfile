@@ -5,7 +5,7 @@ pipeline {
 	jdk 'myjava'
 }
 parameters {
-	string(name: 'tomct-dev', defaultValue: '3.17.142.240', description: 'Staging server')
+	string(name: 'tomcat-dev', defaultValue: '3.17.142.240', description: 'Staging server')
 	
 }
 stages{  	
@@ -24,7 +24,7 @@ stage('build'){
 	}
 	stage('deployment'){
 		steps{
-			sh "scp **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"	
+			sh "scp **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"	
 		}
 		
 	}	
