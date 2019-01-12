@@ -8,7 +8,8 @@ parameters {
 	string(name: 'tomct-dev', defaultValue: '3.17.142.240', description: 'Staging server')
 	
 }
-  	stage('build'){
+stages{  	
+stage('build'){
 	steps{
 		sh 'mvn clean package'
 
@@ -28,4 +29,4 @@ parameters {
 		
 	}	
 }
-
+}
